@@ -1,0 +1,7 @@
+1. ekstrak aplikasi antrian qbest pada suatu folder
+2. siapkan database pada mysql. jika belum ada silahkan dibuat
+3. buat tabel antriloket di database tadi, bisa dengan cara mengeksekusi query pada file antriloket.sql 
+4. jika perlu, buat user mysql khusus untuk mengakses tabel tersebut
+5. edit file antrian.ini , isi parameter2 dgn yang sudah anda siapkan tadi
+6. jalankan antrianloket.exe untuk menampilkan aplikasi display dan suara antrian
+7. jalankan tombolpangil.exe untuk memulai aplikasi tombol antrian

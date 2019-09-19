@@ -28,7 +28,6 @@
 
 # Delphi compiler-generated binaries (safe to delete)
 *.exe
-*.dll
 *.bpl
 *.bpi
 *.dcp
@@ -66,4 +65,5 @@ __recovery/
 *.stat
 
 mplayer/
+release/
 
