@@ -29,7 +29,7 @@ type
     Label2: TLabel;
     Label3: TLabel;
     lblRuntext: TLabel;
-    MPlayerControl1: TMPlayerControl;
+    videoplayer: TMPlayerControl;
     MySQL57Connection1: TMySQL57Connection;
     suaraloket1: TDBText;
     Shape1: TShape;
@@ -78,10 +78,12 @@ begin
   namasoundfile[10]:='\sepuluh.wav';
   namasoundfile[11]:='\sebelas.wav';
 
-  mplayercontrol1.MPlayerPath:='mplayer\mplayer.exe';
-  MPlayerControl1.Filename:='video.avi';
-  mplayercontrol1.StartParam:='-slave -quiet -identify -vf screenshot -vo direct3d -nofontconfig -loop 0';
-  MPlayerControl1.Play;
+  imgLogoRS.Picture.LoadFromFile('logo.jpg');
+
+  videoplayer.MPlayerPath:='mplayer\mplayer.exe';
+  videoplayer.Filename:='video.avi';
+  videoplayer.StartParam:='-slave -quiet -identify -vf screenshot -vo direct3d -nofontconfig -loop 0';
+  videoplayer.Play;
 end;
 
 procedure TForm1.FormShow(Sender: TObject);
