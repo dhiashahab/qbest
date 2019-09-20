@@ -24,8 +24,8 @@ type
     PanelRuntext: TPanel;
     panggilloket1: TDBText;
     panggilloket2: TDBText;
-    Image1: TImage;
-    Label1: TLabel;
+    imgLogoRS: TImage;
+    lblNamaRS: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     lblRuntext: TLabel;
@@ -40,13 +40,9 @@ type
     suaraloket2: TDBText;
     Timer1: TTimer;
     Timer2: TTimer;
-    procedure DBText2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure IniPropStorage1RestoreProperties(Sender: TObject);
-    procedure Label2Click(Sender: TObject);
-    procedure lblRuntextClick(Sender: TObject);
-    procedure MPlayerControl1Click(Sender: TObject);
+    procedure IniPropStorage1SavingProperties(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure Timer2Timer(Sender: TObject);
   private
@@ -95,29 +91,10 @@ begin
    sqlquery2.active:=true;
 end;
 
-procedure TForm1.IniPropStorage1RestoreProperties(Sender: TObject);
+
+procedure TForm1.IniPropStorage1SavingProperties(Sender: TObject);
 begin
-
-end;
-
-procedure TForm1.DBText2Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.Label2Click(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.lblRuntextClick(Sender: TObject);
-begin
-
-end;
-
-procedure TForm1.MPlayerControl1Click(Sender: TObject);
-begin
-
+  inipropstorage1.Active:=false;
 end;
 
 

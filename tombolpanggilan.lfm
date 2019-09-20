@@ -842,6 +842,7 @@ object frmTombolPanggil: TfrmTombolPanggil
     StoredValues = <>
     IniFileName = 'antrian.ini'
     IniSection = 'server'
+    OnSavingProperties = IniPropStorage1SavingProperties
     left = 16
     top = 272
   end

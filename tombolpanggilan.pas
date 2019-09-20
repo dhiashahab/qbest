@@ -31,6 +31,7 @@ type
     procedure btnPanggilClick(Sender: TObject);
     procedure cmbLoketChange(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure IniPropStorage1SavingProperties(Sender: TObject);
   private
 
   public
@@ -55,6 +56,11 @@ begin
    sqlquery1.active:=true;
   edAntrian.Caption:=dbAntrian.Caption;
 
+end;
+
+procedure TfrmTombolPanggil.IniPropStorage1SavingProperties(Sender: TObject);
+begin
+  inipropstorage1.Active:=false;
 end;
 
 procedure TfrmTombolPanggil.cmbLoketChange(Sender: TObject);

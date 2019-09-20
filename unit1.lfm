@@ -15,7 +15,7 @@ object Form1: TForm1
   Font.Color = clBlack
   OnCreate = FormCreate
   OnShow = FormShow
-  SessionProperties = 'MySQL57Connection1.HostName;MySQL57Connection1.DatabaseName;MySQL57Connection1.Password;MySQL57Connection1.Port;MySQL57Connection1.UserName'
+  SessionProperties = 'lblRuntext.Caption;MySQL57Connection1.DatabaseName;MySQL57Connection1.HostName;MySQL57Connection1.Password;MySQL57Connection1.Port;MySQL57Connection1.UserName;lblNamaRS.Caption'
   LCLVersion = '1.8.4.0'
   WindowState = wsMaximized
   object Shape1: TShape
@@ -26,7 +26,7 @@ object Form1: TForm1
     Anchors = [akTop, akLeft, akRight]
     Pen.Color = clWhite
   end
-  object Label1: TLabel
+  object lblNamaRS: TLabel
     Left = 272
     Height = 113
     Top = -16
@@ -47,7 +47,6 @@ object Form1: TForm1
     Top = 132
     Width = 800
     Loop = 0
-    OnClick = MPlayerControl1Click
     Volume = 0
   end
   object DBText1: TDBText
@@ -78,7 +77,6 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
     Transparent = False
-    OnClick = Label2Click
   end
   object Label3: TLabel
     Left = 1024
@@ -94,7 +92,6 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
     Transparent = False
-    OnClick = Label2Click
   end
   object DBText4: TDBText
     Left = 407
@@ -110,7 +107,7 @@ object Form1: TForm1
     ParentColor = False
     ParentFont = False
   end
-  object Image1: TImage
+  object imgLogoRS: TImage
     Left = 6
     Height = 93
     Top = 0
@@ -605,15 +602,14 @@ object Form1: TForm1
       Left = 800
       Height = 54
       Top = -5
-      Width = 5274
+      Width = 228
       Anchors = [akLeft, akBottom]
-      Caption = 'Terimakasih Anda telah bersedia menunggu | Kesembuhan dari Allah SWT, kepuasan pasien tugas kami | Kunjungi media sosial RS Islam Bontang untuk mendapat info terbaru | Web: www.rsibontang.com , FB: Rumah Sakit Islam Bontang , IG: rsislambontang , TW: rsislambontang'
+      Caption = 'Terimakasih'
       Font.Color = clWhite
       Font.Height = -40
       Font.Style = [fsBold]
       ParentColor = False
       ParentFont = False
-      OnClick = lblRuntextClick
     end
   end
   object suaraloket1: TDBText
@@ -658,7 +654,6 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
-    OnClick = Label2Click
   end
   object Label5: TLabel
     Left = 816
@@ -672,7 +667,6 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
-    OnClick = Label2Click
   end
   object DataSource1: TDataSource
     DataSet = SQLQuery1
@@ -763,7 +757,7 @@ object Form1: TForm1
     StoredValues = <>
     IniFileName = 'antrian.ini'
     IniSection = 'server'
-    OnRestoreProperties = IniPropStorage1RestoreProperties
+    OnSavingProperties = IniPropStorage1SavingProperties
     left = 24
     top = 352
   end
