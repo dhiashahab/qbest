@@ -18,6 +18,7 @@ type
     DataSource2: TDataSource;
     DBText1: TDBText;
     DBText4: TDBText;
+    imgBanner: TImage;
     IniPropStorage1: TIniPropStorage;
     Label4: TLabel;
     Label5: TLabel;
@@ -79,6 +80,7 @@ begin
   namasoundfile[11]:='\sebelas.wav';
 
   imgLogoRS.Picture.LoadFromFile('logo.jpg');
+  imgBanner.Picture.LoadFromFile('banner.png');
 
   videoplayer.MPlayerPath:='mplayer\mplayer.exe';
   videoplayer.Filename:='video.avi';
@@ -166,6 +168,7 @@ begin
   end;
 
 end;
+
 
 end.
 
