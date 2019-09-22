@@ -7,4 +7,5 @@ aplikasi antrian qbest, dibuat menggunakan Lazarus 1.8.4
 
 ## requirements
 [mplayer](http://www.mplayerhq.hu) , 
-[TMPlayerControl](https://wiki.freepascal.org/TMPlayerControl)
+[TMPlayerControl](https://wiki.freepascal.org/TMPlayerControl) , 
+[mysql] (https://www.mysql.com) or [mariadb] (https://mariadb.org)
