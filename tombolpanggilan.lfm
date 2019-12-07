@@ -724,7 +724,7 @@ object frmTombolPanggil: TfrmTombolPanggil
   object dbAntrian: TDBText
     Left = 16
     Height = 54
-    Top = 144
+    Top = 56
     Width = 178
     Color = clWindow
     DataField = 'antrian'
@@ -768,20 +768,20 @@ object frmTombolPanggil: TfrmTombolPanggil
     Text = '1'
   end
   object edAntrian: TMaskEdit
-    Left = 80
+    Left = 40
     Height = 150
     Top = 104
-    Width = 128
+    Width = 200
     CharCase = ecNormal
     Color = clBlack
     Font.Color = clLime
     Font.Height = -107
     Font.Style = [fsBold]
-    MaxLength = 2
+    MaxLength = 3
     ParentFont = False
     TabOrder = 3
-    EditMask = '99;1;_'
-    Text = '99'
+    EditMask = '999;1;_'
+    Text = '999'
     SpaceChar = '_'
   end
   object DataSource1: TDataSource
@@ -836,7 +836,7 @@ object frmTombolPanggil: TfrmTombolPanggil
     Transaction = SQLTransaction1
     Params = <>
     left = 16
-    top = 224
+    top = 256
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
@@ -844,6 +844,6 @@ object frmTombolPanggil: TfrmTombolPanggil
     IniSection = 'server'
     OnSavingProperties = IniPropStorage1SavingProperties
     left = 16
-    top = 272
+    top = 296
   end
 end

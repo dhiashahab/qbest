@@ -74,7 +74,7 @@ end;
 
 procedure TfrmTombolPanggil.btnLanjutClick(Sender: TObject);
 begin
-   if (edAntrian.Text='99') then
+   if (edAntrian.Text='999') then
    begin
       sqlquery2.SQL.Text:='update antriloket set panggil=1, antrian=1 where loket=' + cmbloket.Text;
    end

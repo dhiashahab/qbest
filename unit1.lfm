@@ -11,7 +11,7 @@ object Form1: TForm1
   ChildSizing.ShrinkVertical = crsScaleChilds
   ClientHeight = 778
   ClientWidth = 1280
-  Color = clBlack
+  Color = clBackground
   Font.Color = clBlack
   OnCreate = FormCreate
   OnShow = FormShow
@@ -42,67 +42,69 @@ object Form1: TForm1
     Transparent = False
   end
   object videoplayer: TMPlayerControl
-    Left = 2
+    Left = 8
     Height = 450
-    Top = 122
+    Top = 136
     Width = 800
     Loop = 0
     Volume = 0
   end
-  object DBText1: TDBText
-    Left = 412
-    Height = 282
-    Top = 118
-    Width = 858
+  object dbtloket1: TDBText
+    Left = 537
+    Height = 212
+    Top = 112
+    Width = 733
     Anchors = [akTop, akRight]
     DataField = 'antrian'
-    DataSource = DataSource1
+    DataSource = dsloket1
     Font.Color = clLime
-    Font.Height = -213
+    Font.Height = -160
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
+    OnClick = dbtloket1Click
   end
   object Label2: TLabel
-    Left = 808
-    Height = 71
+    Left = 828
+    Height = 54
     Top = 102
-    Width = 160
+    Width = 120
     Anchors = [akTop]
     Caption = 'LOKET'
     Color = clBlack
     Font.Color = clWhite
-    Font.Height = -53
+    Font.Height = -40
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
     Transparent = False
   end
   object Label3: TLabel
-    Left = 1024
-    Height = 71
+    Left = 1083
+    Height = 54
     Top = 102
-    Width = 241
+    Width = 182
     Anchors = [akTop, akRight]
     Caption = 'ANTRIAN'
     Color = clBlack
     Font.Color = clLime
-    Font.Height = -53
+    Font.Height = -40
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
     Transparent = False
+    OnClick = Label3Click
   end
-  object DBText4: TDBText
-    Left = 407
-    Height = 282
-    Top = 342
-    Width = 858
+  object dbtloket2: TDBText
+    Left = 537
+    Height = 212
+    Top = 248
+    Width = 733
     Anchors = [akTop, akRight]
     DataField = 'antrian'
-    DataSource = DataSource2
+    DataSource = dsloket2
     Font.Color = clLime
-    Font.Height = -213
+    Font.Height = -160
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
@@ -4687,13 +4689,13 @@ object Form1: TForm1
     Proportional = True
   end
   object panggilloket1: TDBText
-    Left = 976
+    Left = 984
     Height = 37
-    Top = 238
+    Top = 176
     Width = 165
     Color = clHighlight
     DataField = 'panggil'
-    DataSource = DataSource1
+    DataSource = dsloket1
     Font.Color = clBlack
     Font.Height = -27
     ParentColor = False
@@ -4704,11 +4706,11 @@ object Form1: TForm1
   object panggilloket2: TDBText
     Left = 976
     Height = 37
-    Top = 478
+    Top = 320
     Width = 165
     Color = clHighlight
     DataField = 'panggil'
-    DataSource = DataSource2
+    DataSource = dsloket2
     Font.Color = clBlack
     Font.Height = -27
     ParentColor = False
@@ -4744,13 +4746,13 @@ object Form1: TForm1
     end
   end
   object suaraloket1: TDBText
-    Left = 976
+    Left = 984
     Height = 37
-    Top = 278
+    Top = 216
     Width = 137
     Color = clHighlight
     DataField = 'suara'
-    DataSource = DataSource1
+    DataSource = dsloket1
     Font.Color = clBlack
     Font.Height = -27
     ParentColor = False
@@ -4759,13 +4761,13 @@ object Form1: TForm1
     Visible = False
   end
   object suaraloket2: TDBText
-    Left = 976
+    Left = 986
     Height = 37
-    Top = 518
+    Top = 368
     Width = 137
     Color = clHighlight
     DataField = 'suara'
-    DataSource = DataSource2
+    DataSource = dsloket2
     Font.Color = clBlack
     Font.Height = -27
     ParentColor = False
@@ -4773,38 +4775,39 @@ object Form1: TForm1
     Transparent = False
     Visible = False
   end
-  object Label4: TLabel
-    Left = 816
-    Height = 282
-    Top = 118
-    Width = 123
+  object lblloket1: TLabel
+    Left = 830
+    Height = 212
+    Top = 112
+    Width = 92
     Anchors = [akTop]
     Caption = '1'
     Font.Color = clWhite
-    Font.Height = -213
+    Font.Height = -160
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
+    OnClick = lblloket1Click
   end
-  object Label5: TLabel
-    Left = 816
-    Height = 282
-    Top = 342
-    Width = 123
+  object lblloket2: TLabel
+    Left = 830
+    Height = 212
+    Top = 248
+    Width = 92
     Anchors = [akTop]
     Caption = '2'
     Font.Color = clWhite
-    Font.Height = -213
+    Font.Height = -160
     Font.Style = [fsBold]
     ParentColor = False
     ParentFont = False
   end
   object imgBanner: TImage
     Left = 2
-    Height = 130
+    Height = 106
     Top = 592
-    Width = 1278
-    Anchors = [akLeft, akRight, akBottom]
+    Width = 798
+    Anchors = [akLeft, akBottom]
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869634579010089504E47
       0D0A1A0A0000000D49484452000009FD00000105080600000053CEDFB9000000
@@ -7829,12 +7832,127 @@ object Form1: TForm1
     }
     Stretch = True
   end
-  object DataSource1: TDataSource
-    DataSet = SQLQuery1
+  object dbtloket3: TDBText
+    Left = 537
+    Height = 212
+    Top = 392
+    Width = 733
+    Anchors = [akTop, akRight]
+    DataField = 'antrian'
+    DataSource = dsloket3
+    Font.Color = clLime
+    Font.Height = -160
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object dbtloket4: TDBText
+    Left = 537
+    Height = 212
+    Top = 536
+    Width = 733
+    Anchors = [akTop, akRight]
+    DataField = 'antrian'
+    DataSource = dsloket4
+    Font.Color = clLime
+    Font.Height = -160
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object lblloket4: TLabel
+    Left = 830
+    Height = 212
+    Top = 536
+    Width = 92
+    Anchors = [akTop]
+    Caption = '4'
+    Font.Color = clWhite
+    Font.Height = -160
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    OnClick = lblloket4Click
+  end
+  object lblloket3: TLabel
+    Left = 830
+    Height = 212
+    Top = 394
+    Width = 92
+    Anchors = [akTop]
+    Caption = '3'
+    Font.Color = clWhite
+    Font.Height = -160
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object panggilloket3: TDBText
+    Left = 992
+    Height = 37
+    Top = 488
+    Width = 165
+    Color = clHighlight
+    DataField = 'panggil'
+    DataSource = dsloket3
+    Font.Color = clBlack
+    Font.Height = -27
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    Visible = False
+  end
+  object suaraloket3: TDBText
+    Left = 992
+    Height = 37
+    Top = 528
+    Width = 137
+    Color = clHighlight
+    DataField = 'suara'
+    DataSource = dsloket3
+    Font.Color = clBlack
+    Font.Height = -27
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    Visible = False
+  end
+  object panggilloket4: TDBText
+    Left = 978
+    Height = 37
+    Top = 622
+    Width = 165
+    Color = clHighlight
+    DataField = 'panggil'
+    DataSource = dsloket4
+    Font.Color = clBlack
+    Font.Height = -27
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    Visible = False
+  end
+  object suaraloket4: TDBText
+    Left = 978
+    Height = 37
+    Top = 662
+    Width = 137
+    Color = clHighlight
+    DataField = 'suara'
+    DataSource = dsloket4
+    Font.Color = clBlack
+    Font.Height = -27
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+    Visible = False
+  end
+  object dsloket1: TDataSource
+    DataSet = sqlloket1
     left = 216
     top = 432
   end
-  object SQLQuery1: TSQLQuery
+  object sqlloket1: TSQLQuery
     FieldDefs = <>
     Database = MySQL57Connection1
     Transaction = SQLTransaction1
@@ -7869,23 +7987,8 @@ object Form1: TForm1
     left = 112
     top = 432
   end
-  object SQLQuery2: TSQLQuery
-    FieldDefs = <    
-      item
-        Name = 'loket'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'antrian'
-        DataType = ftInteger
-        Precision = -1
-      end    
-      item
-        Name = 'panggil'
-        DataType = ftInteger
-        Precision = -1
-      end>
+  object sqlloket2: TSQLQuery
+    FieldDefs = <>
     Database = MySQL57Connection1
     Transaction = SQLTransaction1
     SQL.Strings = (
@@ -7895,8 +7998,8 @@ object Form1: TForm1
     left = 304
     top = 480
   end
-  object DataSource2: TDataSource
-    DataSet = SQLQuery2
+  object dsloket2: TDataSource
+    DataSet = sqlloket2
     left = 216
     top = 480
   end
@@ -7905,7 +8008,7 @@ object Form1: TForm1
     Database = MySQL57Connection1
     Transaction = SQLTransaction1
     Params = <>
-    left = 368
+    left = 408
     top = 520
   end
   object Timer2: TTimer
@@ -7921,5 +8024,40 @@ object Form1: TForm1
     OnSavingProperties = IniPropStorage1SavingProperties
     left = 24
     top = 352
+  end
+  object sqlloket3: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL57Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from antriloket where loket=''3'''
+    )
+    UpdateSQL.Strings = (
+      'update antriloket set panggil=0 where loket=1'
+    )
+    Params = <>
+    left = 344
+    top = 432
+  end
+  object sqlloket4: TSQLQuery
+    FieldDefs = <>
+    Database = MySQL57Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'select * from antriloket where loket=''4'';'
+    )
+    Params = <>
+    left = 344
+    top = 480
+  end
+  object dsloket3: TDataSource
+    DataSet = sqlloket3
+    left = 256
+    top = 432
+  end
+  object dsloket4: TDataSource
+    DataSet = sqlloket4
+    left = 256
+    top = 480
   end
 end
