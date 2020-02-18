@@ -177,8 +177,15 @@ begin
         if (antrian>99) then
            begin
                 PlaySound(pchar(concat(namafoldersuara,namasoundfile[(antrian div 100)*100])),0,SND_SYNC);
-                PlaySound(pchar(concat(namafoldersuara,namasoundfile[((antrian mod 100) div 10)*10])),0,SND_SYNC);
-                if ((antrian mod 10)>0) then PlaySound(pchar(concat(namafoldersuara,namasoundfile[antrian mod 10])),0,SND_SYNC);
+                if ((antrian mod 100)<21) then
+                   begin
+                      PlaySound(pchar(concat(namafoldersuara,namasoundfile[antrian mod 100])),0,SND_SYNC);
+                   end
+                else
+                begin
+                    PlaySound(pchar(concat(namafoldersuara,namasoundfile[((antrian mod 100) div 10)*10])),0,SND_SYNC);
+                    if ((antrian mod 10)>0) then PlaySound(pchar(concat(namafoldersuara,namasoundfile[antrian mod 10])),0,SND_SYNC);
+                end;
            end
         else
         begin
